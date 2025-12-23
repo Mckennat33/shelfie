@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black; 
+}
+
+.shelfie-img {
+  margin-left: 100px;
+  border: 2px solid black
+}
+
+.right-nav {
+  margin-right: 100px;
+  border: 2px solid black
+}
