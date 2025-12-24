@@ -16,7 +16,7 @@ function Home() {
             <h3>Home Page</h3>
             <NavLink>All Books</NavLink>
             <div className='book-grid'>
-                {Books.map((book) => {
+                {Books.slice(0, 18).map((book) => {
                     return (
                         <div key={book.id} className='book-card'>
                             <img className='book-image' src={book.image_url} />
