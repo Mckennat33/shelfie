@@ -11,10 +11,12 @@ function Header() {
         <h1><Profile /></h1>
       ) : (
         <>
+        <div className='shelfie-img-div'>
           <NavLink to="/" className='shelfie-img'>Shelfie</NavLink>
+        </div>
           <div className='right-nav'>
-            <p>Sign In</p>
-            <p>Create an Account</p>
+            <p className='sign-in'>Sign In</p>
+            <p className='create-account'>Create an Account</p>
           </div>
         </>
       )}

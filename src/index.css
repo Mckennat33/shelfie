@@ -19,12 +19,18 @@ code {
   border: 2px solid black; 
 }
 
+.shelfie-img-div {
+  display: flex;
+  align-items: center;
+}
+
 .shelfie-img {
   margin-left: 100px;
-  border: 2px solid black
 }
 
 .right-nav {
+  display: flex;
+  justify-content: space-between;
   margin-right: 100px;
   border: 2px solid black
 }
