@@ -1,8 +1,5 @@
 import react from 'react'
 
-
-
-
 function Home() {
     async function fetchBooks() {
         const url = 'https://amazon-books-data-api1.p.rapidapi.com/api/books?limit=150';
@@ -15,8 +12,10 @@ function Home() {
             };
             const bookData = await fetch(url, options)
             const data = await bookData.json()
+
+            // Book Author, title, image url, publisher, year it was published
     }    
-    fetchBooks()
+    // fetchBooks()
 
     return (
         <>

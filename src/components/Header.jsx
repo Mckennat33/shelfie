@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink  } from 'react-router-dom';
+import Profile from '../pages/Profile.jsx'
 
 function Header() {
     return (
@@ -8,6 +9,7 @@ function Header() {
             <div className='right-nav'>
                 <p>Sign In</p>
                 <p>Create an Account</p>
+                <Profile />
             </div>
                
         </div>

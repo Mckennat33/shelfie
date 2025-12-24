@@ -7,9 +7,9 @@ function Layout() {
     return (
         <div className="site-wrapper">
             <Header />
-            <main>
+            <div>
                 <Outlet />
-            </main>
+            </div>
             <Footer />
         </div>
     )
