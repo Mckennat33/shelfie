@@ -9,19 +9,17 @@ console.log(Books)
 // inside of Home what do we want to render
 // All books |  Books read  | TBR 
 
-const { author, description, genre, id, image_url, title, total_pages, year_published } = Books
-
 
 function Home() {
     return (
         <>
             <h3>Home Page</h3>
             <NavLink>All Books</NavLink>
-            <div>
+            <div className='book-grid'>
                 {Books.map((book) => {
                     return (
-                        <div key={book.id} className='book-div'>
-                            <img src={book.image_url} />
+                        <div key={book.id} className='book-card'>
+                            <img className='book-image' src={book.image_url} />
                             <p className='book-author'>Author: {book.author}</p>
                             <p className='book-title'>Title: {book.title}</p>
                             <p className='book-genre'>Genre: {book.genre}</p>
