@@ -97,5 +97,26 @@ code {
 
 .graph-main-card {
   display: flex;
+  border: 2px solid black;
+  flex-direction: column;
 }
 
+.header-bttns-container {
+  border: 2px solid black;
+  display: flex;
+}
+
+.header-bttns-container, h3 {
+  justify-content: space-around;
+  
+}
+
+.left-header {
+  border: 2px solid black; 
+}
+
+.right-header {
+  border: 2px solid black; 
+  display: flex;
+  align-items: center;
+}
