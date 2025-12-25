@@ -20,27 +20,29 @@ function Footer() {
     return (
         <div className="footer">
             <h1>Footer</h1>
-            <div className="graph-main-card" >
-                <div className="header-bttns-container">
-                    <div className='left-header'>
-                    <img src="" alt="Reading Progess" />
-                    <h3>Reading Progress</h3>
+            <div className='footer-main-container'>
+                <div className="graph-main-card" >
+                    <div className="header-bttns-container">
+                        <div className='left-header'>
+                            <img src="" alt="Reading Progess" />
+                            <h3>Reading Progress</h3>
+                        </div>
+                        <div className='right-header'>
+                            <button>Log Pages +</button>
+                        </div>
                     </div>
-                    <div className='right-header'>
-                        <button>Log Pages +</button>
+                    <div className="page-counter-container">
+                        <h3>Total Pages</h3>
+                        <h3>Daily Average</h3>
+                    </div>
+                    <div className="graph-container">
+                        <h3>Graph goes here</h3>
                     </div>
                 </div>
-                <div className="page-counter-container">
-                    <h3>Total Pages</h3>
-                    <h3>Daily Average</h3>
-                </div>
-                <div className="graph-container">
-                    <h3>Graph goes here</h3>
-                </div>
+                <div className='reading-graph'>
+                    <AgCharts options={chartOptions} />
+                </div>  
             </div>
-            <div>
-                <AgCharts options={chartOptions} />
-            </div>  
         </div>
     )
 }
