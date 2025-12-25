@@ -88,3 +88,14 @@ code {
   color: #555;
   margin-bottom: 10px;
 }
+
+
+
+/* Footer 
+    Graph items
+*/
+
+.graph-main-card {
+  display: flex;
+}
+

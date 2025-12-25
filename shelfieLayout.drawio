@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e">
+    <diagram id="we7zLiUOwoApkUvDXvkV" name="Page-1">
+        <mxGraphModel dx="1202" dy="1913" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="160" y="-360" width="840" height="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="-270" width="350" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="610" y="-270" width="350" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Log Pages" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="830" y="-340" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Readiing Progress" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="-345" width="160" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="IMG" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="-327.5" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Total Pages (7days)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="-250" width="110" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Daily Average" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="-250" width="110" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="-110" width="720" height="230" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
