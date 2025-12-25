@@ -3,12 +3,8 @@ import { NavLink } from 'react-router-dom';
 // import Books from '../bookdata/books'
 import Books from '../database/books.js'
 import Image from 'react'
-
-console.log(Books)
-
 // inside of Home what do we want to render
 // All books |  Books read  | TBR 
-
 
 function Home() {
     return (
