@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 // import Books from '../bookdata/books'
 import Books from '../database/books.js'
 import Image from 'react'
@@ -10,6 +10,7 @@ function Home() {
     return (
         <>
             <h3>Home Page</h3>
+            <Outlet />
             <NavLink
                 to='/'
                 // need to figure this part out.
