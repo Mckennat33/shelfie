@@ -2,6 +2,7 @@ function Profile() {
     return (
         <>
             <p>Profile Page</p>
+            {/* Personal reading data  */}
         </>
     )
 }
