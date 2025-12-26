@@ -89,6 +89,20 @@ code {
   margin-bottom: 10px;
 }
 
+.book-bttns-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.read-book-bttn {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.remove-book-bttn {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 
 
 /* Footer 

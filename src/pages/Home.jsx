@@ -25,8 +25,10 @@ function Home() {
                             <p className='book-genre'>Genre: {book.genre}</p>
                             <p className='book-description'>Description: {book.description}</p>
                             <p className='book-pages'> Pages: {book.total_pages}</p>
-                            <button className='read-book-bttn'>Read +</button>
-                            <button className='remove-book-bttn'>Remove -</button>
+                            <div className='book-bttns-container'>
+                                <button className='read-book-bttn'>Read +</button>
+                                <button className='remove-book-bttn'>Remove -</button>
+                            </div>
                         </div>
                     )
                 })}
