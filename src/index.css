@@ -17,6 +17,7 @@ code {
   display: flex;
   justify-content: space-between;
   border: 2px solid black; 
+  background-color: #d5dee7;
 }
 
 .shelfie-img-div {
@@ -48,9 +49,43 @@ code {
 
 
 /* Home 
-    All book cards
 */
 
+/* Dashboard Links Want to read / Currently /Finished */
+
+.dashboard-link-container {
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+}
+
+.want-to-read {
+  color: red;
+  border-radius: 5px;
+  border: 2px solid red;
+  padding: 10px;
+}
+
+.currently-reading {
+  color: green;
+  border-radius: 5px;
+  border: 2px solid green;
+  padding: 10px;
+}
+
+.finished-books {
+  color: blue;
+  border-radius: 5px;
+  border: 2px solid blue;
+  padding: 10px;
+}
+
+
+
+
+
+
+/* All book cards */
 .book-grid {
   display: flex;
   flex-wrap: wrap;
@@ -60,7 +95,8 @@ code {
 
 .book-card {
   width: 350px; /* card width */
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #FFFFFF;
   border-radius: 10px; /* rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* soft shadow */
   overflow: hidden; /* keeps image inside the card */
@@ -97,11 +133,16 @@ code {
 .read-book-bttn {
   border-radius: 5px;
   margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: green;
 }
 
 .remove-book-bttn {
   border-radius: 5px;
   margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #2563EB;
 }
 
 
