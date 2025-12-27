@@ -5,25 +5,9 @@ import Books from '../database/books.js'
 import Readbooks from './Readbooks.jsx';
 import Image from 'react'
 import BookDashboard from '../components/BookDashboard.jsx';
-// inside of Home what do we want to render
-// All books |  Books read  | TBR 
+import BookNews from '../database/booknews.js'
 
-// const url = 'https://real-time-news-data.p.rapidapi.com/search?query=Books&limit=10&time_published=anytime&country=US&lang=en';
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'x-rapidapi-key': 'de51889a1fmshe095099b1a97993p13134fjsnc818ad7373cb',
-// 		'x-rapidapi-host': 'real-time-news-data.p.rapidapi.com'
-// 	}
-// };
-
-// try {
-// 	const response = await fetch(url, options);
-// 	const result = await response.json();
-// 	console.log(result);
-// } catch (error) {
-// 	console.error(error);
-// }
+console.log(BookNews)
 
 function Home() {
     return (
