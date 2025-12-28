@@ -12,6 +12,7 @@ import BookDashBoard from './components/BookDashboard'
 import AllBooks from './pages/AllBooks'
 import CurrentlyReading from './pages/CurrentlyReading';
 import Finished from './pages/Finished';
+import BookCard from './pages/BookCard';
 
 function App() {
   return (
@@ -20,10 +21,14 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="profile" element={<Profile />} />
           <Route path='/' element={<BookDashBoard />}>
-            <Route index element={<AllBooks />} />
+            <Route path='/' element={<AllBooks />} >
+              <Route path='/book/:id' element={<BookCard />} />
+            </Route>
             <Route path="/currentlyreading" element={<CurrentlyReading />} />
             <Route path="/finished" element={<Finished />} />
           </Route>
+          <Route path='/Books/:id' />
+          
         </Route>
       </Routes>
     </BrowserRouter>

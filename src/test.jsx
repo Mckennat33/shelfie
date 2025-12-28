@@ -1,16 +1,9 @@
-
-import Books from '../database/books.js'
-
-
-const AllBooks = () => {
-    return(
-        <>
-            <h1>All Books</h1>
-            <div className='book-grid'>
-                {Books.slice(0, 9).map((book) => {
+                {Books.slice(0, 3).map((book) => {
                     return (
-
                         <div key={book.id} className='book-card'>
+                            <Link 
+                                // link to that specific book
+                            >
                             <img className='book-image' src={book.image_url} />
                             <p className='book-author'>Author: {book.author}</p>
                             <p className='book-title'>Title: {book.title}</p>
@@ -20,11 +13,7 @@ const AllBooks = () => {
                             <div className='book-bttns-container'>
                                 <button className='read-book-bttn'>Reading +</button>
                             </div>
+                        </Link>
                         </div>
                     )
                 })}
-            </div>
-        </>
-    )
-}
-export default AllBooks; 
