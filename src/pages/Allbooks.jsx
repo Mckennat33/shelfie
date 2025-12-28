@@ -2,7 +2,7 @@
 import Books from '../database/books.js'
 
 
-const Allbooks = () => {
+const AllBooks = () => {
     return(
         <>
             <h1>All Books</h1>
@@ -28,4 +28,4 @@ const Allbooks = () => {
     )
 }
 
-export default Allbooks; 
+export default AllBooks; 

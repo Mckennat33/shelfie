@@ -6,11 +6,11 @@ import Header from './components/Header'
 import Layout from './components/Layout'
 import Footer from './components/Header'
 import Profile from './pages/Profile'
-import Books from './pages/Currentlyreading'
+// import Books from './pages/CurrentlyReading'
 import Readbooks from './pages/Finished'
 import BookDashBoard from './components/BookDashboard'
-import Allbooks from './pages/Allbooks'
-import Currentlyreading from './pages/Currentlyreading';
+import AllBooks from './pages/AllBooks'
+import CurrentlyReading from './pages/CurrentlyReading';
 import Finished from './pages/Finished';
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="profile" element={<Profile />} />
           <Route path='/' element={<BookDashBoard />}>
-            <Route index element={<Allbooks />} />
-            <Route path="/currentlyreading" element={<Currentlyreading />} />
+            <Route index element={<AllBooks />} />
+            <Route path="/currentlyreading" element={<CurrentlyReading />} />
             <Route path="/finished" element={<Finished />} />
           </Route>
         </Route>

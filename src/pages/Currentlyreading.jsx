@@ -2,7 +2,7 @@ import react from 'react'
 import { NavLink } from 'react-router-dom'
 import Books from '../database/books.js'
 
-function Currentlyreading() {
+function CurrentlyReading() {
     return (
         <>
             <h1>Currently Reading</h1>
@@ -28,4 +28,4 @@ function Currentlyreading() {
     )
 }
 
-export default Currentlyreading; 
+export default CurrentlyReading; 
