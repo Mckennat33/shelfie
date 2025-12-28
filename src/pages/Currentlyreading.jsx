@@ -2,13 +2,12 @@ import react from 'react'
 import { NavLink } from 'react-router-dom'
 
 
-function Books() {
+function Currentlyreading() {
     return (
         <>
-            <h1>Books</h1>
-            
+            <h1>Currently Reading</h1>
         </>
     )
 }
 
-export default Books; 
+export default Currentlyreading; 

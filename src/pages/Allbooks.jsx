@@ -1,20 +1,11 @@
-import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom';
-// import Books from '../bookdata/books'
+
 import Books from '../database/books.js'
-import Readbooks from './Readbooks.jsx';
-import Image from 'react'
-import BookDashboard from '../components/BookDashboard.jsx';
-import BookNews from '../database/booknews.js'
 
-console.log(BookNews)
 
-function Home() {
-    return (
+const Allbooks = () => {
+    return(
         <>
-            <h3>Home Page</h3>
-            <BookDashboard />
-            <Outlet />
+            <h1>All Books</h1>
             <div className='book-grid'>
                 {Books.slice(0, 8).map((book) => {
                     return (
@@ -27,8 +18,7 @@ function Home() {
                             <p className='book-description'>Description: {book.description}</p>
                             <p className='book-pages'> Pages: {book.total_pages}</p>
                             <div className='book-bttns-container'>
-                                <button className='read-book-bttn'>Read +</button>
-                                <button className='remove-book-bttn'>Remove -</button>
+                                <button className='read-book-bttn'>Reading +</button>
                             </div>
                         </div>
                     )
@@ -38,4 +28,4 @@ function Home() {
     )
 }
 
-export default Home; 
+export default Allbooks; 

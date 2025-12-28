@@ -51,6 +51,9 @@ code {
 /* Home 
 */
 
+
+
+
 /* Dashboard Links Want to read / Currently /Finished */
 
 .dashboard-link-container {
@@ -59,7 +62,7 @@ code {
   border: 2px solid black;
 }
 
-.want-to-read {
+.all-books {
   color: red;
   border-radius: 5px;
   border: 2px solid red;
