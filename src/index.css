@@ -56,6 +56,20 @@ code {
 
 /* Dashboard Links Want to read / Currently /Finished */
 
+.dashboard-container {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+
 .dashboard-link-container {
   display: flex;
   justify-content: space-around;

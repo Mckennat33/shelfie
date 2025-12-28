@@ -3,8 +3,10 @@ import { Link, Outlet } from 'react-router-dom'
 const BookDashboard = () => {
     return ( 
         <>
-            <div>
-                <h1>Dashboard</h1>
+            <div className='dashboard-container'>
+                <div className='logo-container'>
+                    <h1 className='shelfie-logo'>Shelfie Logo</h1>
+                </div>
                 <nav className='dashboard-link-container'>
                     <Link
                         to='currentlyreading'
