@@ -21,9 +21,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="profile" element={<Profile />} />
           <Route path='/' element={<BookDashBoard />}>
-            <Route path='/' element={<AllBooks />} >
-              <Route path='/book/:id' element={<BookCard />} />
-            </Route>
+            <Route path='/' element={<AllBooks />} />
+            <Route path='/books/:id' element={<BookCard />} />
             <Route path="/currentlyreading" element={<CurrentlyReading />} />
             <Route path="/finished" element={<Finished />} />
           </Route>
