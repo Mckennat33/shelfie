@@ -8,6 +8,12 @@ const BookDashboard = () => {
                     <h1 className='shelfie-logo'>Shelfie Logo</h1>
                 </div>
                 <nav className='dashboard-link-container'>
+                    <Link 
+                        to='/'
+                        className='all-books'
+                    >
+                        Books
+                    </Link>
                     <Link
                         to='currentlyreading'
                         className='currently-reading'
