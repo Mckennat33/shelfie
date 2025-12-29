@@ -1,11 +1,22 @@
-
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Books from '../database/books.js'
 import BookDetails from './BookDetails.jsx'
-console.log(Books)
 // How do we pass the book that was clicked to bookcard
 const AllBooks = () => {
  
+    const [ readSelect, setReadSelect ] = useState('')
+    
+    function handleSelect() {
+        
+    }
+
+    useEffect(() => {
+
+        console.log(readSelect)
+    }, [readSelect])
+
+
     return(
         <>
             <h1>All Books</h1>
@@ -21,11 +32,13 @@ const AllBooks = () => {
                             <p className='book-title'>Title: {book.title}</p>
                             <p className='book-genre'>Genre: {book.genre}</p>
                             </Link>
-                            <select className='book-bttns-container'>
-                                <option className='want-to-read'>Want to read</option>
-                                <option className='currently-reading'>Currenlty reading</option>
-                                <option className='read'>Read</option>
+                            <form method="GET" onSubmit={handleSelect}>
+                            <select value={readSelect} className='book-bttns-container' onChange={e => setReadSelect(e.target.value)}>
+                                <option value={`Want to read ${book.id}`} className='want-to-read'>Want to read</option>
+                                <option value={`Currently reading ${book.id}`} className='currently-reading'>Currently reading</option>
+                                <option value={`Read ${book.id}`} className='read'>Read</option>
                             </select>
+                            </form>
                         </div>
                     )
                 })}
