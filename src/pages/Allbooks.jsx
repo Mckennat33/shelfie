@@ -7,15 +7,15 @@ const AllBooks = () => {
  
     const [ readSelect, setReadSelect ] = useState('')
     
-    function handleSelect() {
+    function handleSelect(event) {   
+        setReadSelect(event.target.value)
         
     }
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        console.log(readSelect)
-    }, [readSelect])
-
+    //     console.log(readSelect)
+    // }, [readSelect])
 
     return(
         <>
@@ -33,7 +33,7 @@ const AllBooks = () => {
                             <p className='book-genre'>Genre: {book.genre}</p>
                             </Link>
                             <form method="GET" onSubmit={handleSelect}>
-                            <select value={readSelect} className='book-bttns-container' onChange={e => setReadSelect(e.target.value)}>
+                            <select value={readSelect} className='book-bttns-container' onChange={handleSelect}>
                                 <option value={`Want to read ${book.id}`} className='want-to-read'>Want to read</option>
                                 <option value={`Currently reading ${book.id}`} className='currently-reading'>Currently reading</option>
                                 <option value={`Read ${book.id}`} className='read'>Read</option>
