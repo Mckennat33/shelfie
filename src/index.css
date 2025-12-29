@@ -141,16 +141,19 @@ code {
 }
 
 .book-bttns-container {
-  display: flex;
-  justify-content: space-around;
+  
+  justify-content: space-around; 
+
+  
 }
 
-.read-book-bttn {
+
+/* .read-book-bttn {
   border-radius: 5px;
   margin-bottom: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  background-color: green;
-}
+  background-color: red;
+} */
 
 .remove-book-bttn {
   border-radius: 5px;

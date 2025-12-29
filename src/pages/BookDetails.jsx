@@ -14,20 +14,25 @@ import { useState } from 'react'
 const BookDetails = () => {
     const navigate = useNavigate()
     const { id } = useParams()
-    
     const book = Books.find(b => b.id === Number(id));
-    console.log(book)
-    
     return (
         <>
             <button
                 onClick={() => navigate(-1)}
+                className='back-bttn'
             >Back To Books </button>
-            <h1>BookDetails</h1>
-            <p>Author: {book.author}</p>
-            <p>Title: {book.title}</p>
-            <p>Genre: {book.genre}</p>
-            <p>Description: {book.description}</p>
+            <h1>Book Details</h1>
+            <div className='book-card'>
+                <img src={book.image_url} alt="" />
+                <p>Author: {book.author}</p>
+                <p>Title: {book.title}</p>
+                <p>Genre: {book.genre}</p>
+                <p>Description: {book.description}</p>
+                <p>Rating - - - - -   </p> 
+                <div className='book-bttns-container'>
+                    <button className='read-book-bttn'>Reading +</button>
+                </div>
+            </div>
         </>
     )
 }
