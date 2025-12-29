@@ -2,15 +2,6 @@ import Books from '../database/books.js'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
-
-// const book = Books.map((book) => {
-//     // console.log(book.author)
-//     return(
-//         <div></div>
-//     )
-// })
-
-
 const BookDetails = () => {
     const navigate = useNavigate()
     const { id } = useParams()
