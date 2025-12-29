@@ -1,14 +1,9 @@
 
-import { Link, link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import Books from '../database/books.js'
-
+import BookCard from './BookCard.jsx'
 // How do we pass the book that was clicked to bookcard
-
-                
-
 const AllBooks = () => {
-
-
                  const bookCard = Books.slice(0,1).map((book) => {
                     <Link
                         to={`/books/${book.id}`}
@@ -24,8 +19,6 @@ const AllBooks = () => {
                         </div>
                     </Link>
                  })   
-
-
     return(
         <>
             <h1>All Books</h1>
@@ -49,6 +42,9 @@ const AllBooks = () => {
                         </div>
                     )
                 })}
+
+
+                
             </div>
         </>
     )

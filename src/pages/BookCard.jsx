@@ -1,18 +1,33 @@
 import Books from '../database/books.js'
-import { Link } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 
-console.log(Books.id)
+
+// const book = Books.map((book) => {
+//     // console.log(book.author)
+//     return(
+//         <div></div>
+//     )
+// })
+
 
 const BookCard = () => {
+    const navigate = useNavigate()
+    const { id } = useParams()
+    
+    const book = Books.find(b => b.id === Number(id));
+    console.log(book)
+    
     return (
         <>
-            <h1>Book Card</h1>
-            <div>
-                <Link
-                    to={`/books/${Books.id}`}
-                >
-                </Link>
-            </div>
+            <button
+                onClick={() => navigate(-1)}
+            >Back To Books </button>
+            <h1>BookDetails</h1>
+            <p>Author: {book.author}</p>
+            <p>Title: {book.title}</p>
+            <p>Genre: {book.genre}</p>
+            <p>Description: {book.description}</p>
         </>
     )
 }
