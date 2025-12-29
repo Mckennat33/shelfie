@@ -11,7 +11,7 @@ import { useState } from 'react'
 // })
 
 
-const BookCard = () => {
+const BookDetails = () => {
     const navigate = useNavigate()
     const { id } = useParams()
     
@@ -32,5 +32,5 @@ const BookCard = () => {
     )
 }
 
-export default BookCard
+export default BookDetails
 

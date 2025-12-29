@@ -1,7 +1,7 @@
 
 import { Link, useParams } from 'react-router-dom'
 import Books from '../database/books.js'
-import BookCard from './BookCard.jsx'
+import BookDetails from './BookDetails.jsx'
 // How do we pass the book that was clicked to bookcard
 const AllBooks = () => {
                  const bookCard = Books.slice(0,1).map((book) => {
