@@ -29,9 +29,11 @@ const BookDetails = () => {
                 <p>Genre: {book.genre}</p>
                 <p>Description: {book.description}</p>
                 <p>Rating - - - - -   </p> 
-                <div className='book-bttns-container'>
-                    <button className='read-book-bttn'>Reading +</button>
-                </div>
+                    <select className='book-bttns-container'>
+                        <option className='want-to-read'>Want to read</option>
+                        <option className='currently-reading'>Currenlty reading</option>
+                        <option className='read'>Read</option>
+                    </select>
             </div>
         </>
     )
