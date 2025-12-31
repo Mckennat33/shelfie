@@ -8,11 +8,15 @@ const AllBooks = () => {
     const [ readSelect, setReadSelect ] = useState({})
 
     function handleSelect(bookId, event) {   
-        setReadSelect(prev => ({
-        ...prev,
+        const read = {}
+        const currentlyreading = {}
+        const wantToRead = {}
+        console.log(bookId, event)
+        setReadSelect(prevSelect => ({
+        ...prevSelect,
         [bookId]: event
         }))
-        console.log(readSelect)
+        
     }
 
 
