@@ -7,8 +7,8 @@ const AllBooks = () => {
  
     const [ readSelect, setReadSelect ] = useState({})
     const [read, setRead] = useState({})
-    const currentlyreading = {title: ''}
-    const wantToRead = {title: ''}
+    const [currentlyreading, setCurrentlyReading] = useState({})
+    const [wantToread, setWantToRead] = useState({})
 
     function handleSelect(bookId, event, book) { 
         setReadSelect(prevSelect => ({
@@ -24,13 +24,19 @@ const AllBooks = () => {
             }))
             // console.log("Read 1")
         } else if (event === "Want to read") {
-            // console.log("Want to read 1")
+            setWantToRead(prevWantToRead => ({
+                ...prevWantToRead, 
+                book
+            }))
         } else if (event === 'Currently reading') {
-            // console.log('Currenlty reading 1')
+            setCurrentlyReading(prevCurrentlyRead => ({
+                ...prevCurrentlyRead, 
+                book
+            }))
         }    
     }
 
-    console.log(read)
+    console.log(read, currentlyreading, wantToread)
 
 
     return(
