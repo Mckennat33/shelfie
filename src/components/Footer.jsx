@@ -28,7 +28,9 @@ function Footer() {
                             <h3>Reading Progress</h3>
                         </div>
                         <div className='right-header'>
+                            <input type="text" />
                             <button>Log Pages +</button>
+                            
                         </div>
                     </div>
                     <div className="page-counter-container">
