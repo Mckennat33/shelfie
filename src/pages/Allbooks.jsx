@@ -2,20 +2,19 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Books from '../database/books.js'
 import BookDetails from './BookDetails.jsx'
-// How do we pass the book that was clicked to bookcard
+
 const AllBooks = () => {
  
-    const [ readSelect, setReadSelect ] = useState('')
-    
-    function handleSelect(event) {   
-        setReadSelect(event.target.value)
-        
+    const [ readSelect, setReadSelect ] = useState({})
+
+    function handleSelect(bookId, event) {   
+        setReadSelect(prev => ({
+        ...prev,
+        [bookId]: event
+        }))
+        console.log(readSelect)
     }
 
-    // useEffect(() => {
-
-    //     console.log(readSelect)
-    // }, [readSelect])
 
     return(
         <>
@@ -32,11 +31,14 @@ const AllBooks = () => {
                             <p className='book-title'>Title: {book.title}</p>
                             <p className='book-genre'>Genre: {book.genre}</p>
                             </Link>
-                            <form method="GET" onSubmit={handleSelect}>
-                            <select value={readSelect} className='book-bttns-container' onChange={handleSelect}>
-                                <option value={`Want to read ${book.id}`} className='want-to-read'>Want to read</option>
-                                <option value={`Currently reading ${book.id}`} className='currently-reading'>Currently reading</option>
-                                <option value={`Read ${book.id}`} className='read'>Read</option>
+
+                            <form>
+                            <select value={readSelect[book.id] || 'Want to read'} className='book-bttns-container' 
+                            onChange={(e) => handleSelect(book.id, e.target.value)}
+                            >
+                                <option value='Want to read' className='want-to-read'>Want to read</option>
+                                <option value='Currently Reading' className='currently-reading'>Currently reading</option>
+                                <option value='Read' className='read'>Read</option>
                             </select>
                             </form>
                         </div>
