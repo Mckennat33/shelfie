@@ -7,23 +7,30 @@ const AllBooks = () => {
  
     const [ readSelect, setReadSelect ] = useState({})
     const [read, setRead] = useState({})
+    const currentlyreading = {title: ''}
+    const wantToRead = {title: ''}
 
-    function handleSelect(bookId, event) {   
-        const currentlyreading = {title: ''}
-        const wantToRead = {title: ''}
+    function handleSelect(bookId, event, book) { 
         setReadSelect(prevSelect => ({
             ...prevSelect,
-            [bookId]: event
+            [bookId]: event // key value pairs 
         }))
+        // console.log(book)
+        
         if(event === 'Read') {
-            console.log("Read 1")
+            setRead(prevRead => ({
+                ...prevRead, 
+                book
+            }))
+            // console.log("Read 1")
         } else if (event === "Want to read") {
-            console.log("Want to read 1")
+            // console.log("Want to read 1")
         } else if (event === 'Currently reading') {
-            console.log('Currenlty reading 1')
-        }
-    
+            // console.log('Currenlty reading 1')
+        }    
     }
+
+    console.log(read)
 
 
     return(
@@ -43,7 +50,7 @@ const AllBooks = () => {
                             </Link>
                             <form>
                             <select value={readSelect[book.id] || 'Want to read'} className='book-bttns-container' 
-                            onChange={(e) => handleSelect(book.id, e.target.value)}
+                            onChange={(e) => handleSelect(book.id, e.target.value, book)}
                             >
                                 <option value='Want to read' className='want-to-read'>Want to read</option>
                                 <option value='Currently reading' className='currently-reading'>Currently reading</option>
