@@ -20,25 +20,5 @@
 
 
 
-const songs = [
-  { title: "Nights", artist: "Frank Ocean", duration: 307 },
-  { title: "Redbone", artist: "Childish Gambino", duration: 326 },
-  { title: "Location", artist: "Playboi Carti", duration: 169 }
-];
 
-const songDuration = songs.map(({title, artist, duration}) => {
-
-    const minutes = Math.floor(duration / 60)
-    const seconds = duration % 60
-
-
-    return {
-        title, 
-        artist, 
-        length: `${minutes}:${seconds.toString().padStart(2, "0")}`, 
-        isLongSong: duration >= 300
-    }
-})
-
-const minutes = Math.floor(totalSeconds / 60)
 
