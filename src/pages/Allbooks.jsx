@@ -34,7 +34,7 @@ const AllBooks = () => {
                 book
             }))
         }    
-    }
+    }  
 
     console.log(read, currentlyreading, wantToread)
 

@@ -17,6 +17,11 @@ function Footer() {
         series: [{ type: 'line', xKey: 'month', yKey: 'pagesRead' }],
     });
 
+    function handleLogPages(e) {
+        e.preventDefault()
+        console.log('Logged Pages')
+    }
+
     return (
         <div className="footer">
             <h1>Footer</h1>
@@ -28,8 +33,10 @@ function Footer() {
                             <h3>Reading Progress</h3>
                         </div>
                         <div className='right-header'>
+                            <form action="" >
                             <input type="text" />
-                            <button>Log Pages +</button>
+                            <button onSubmit={handleLogPages}>Log Pages +</button>
+                            </form>
                             
                         </div>
                     </div>
