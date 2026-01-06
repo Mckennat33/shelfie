@@ -71,8 +71,8 @@ const AllBooks = () => {
                 })}
             </div>
             <div>
-                {/* <CurrentlyReading book={currentlyreading}  />
-                <Finished book={finished} /> */}
+                <CurrentlyReading books={currentlyreading}  />
+                <Finished read={read.book} />
             </div>
         </>
     )
