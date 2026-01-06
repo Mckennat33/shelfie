@@ -7,7 +7,9 @@ const SignUp = () => {
     const [ password, setPassword ] = useState()
 
     async function handleSubmit() { 
-        const response = await fetch("POST")
+        const response = await fetch("POST", {
+
+        })
 
     }
 
@@ -39,3 +41,5 @@ const SignUp = () => {
         </>
     )
 }
+
+export default SignUp; 
