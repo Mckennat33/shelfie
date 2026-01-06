@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Books from '../database/books.js'
 import BookDetails from './BookDetails.jsx'
+import CurrentlyReading from './CurrentlyReading.jsx'
+import Finished from './Finished.jsx'
+
 
 const AllBooks = () => {
  
@@ -66,6 +69,10 @@ const AllBooks = () => {
                         </div>
                     )
                 })}
+            </div>
+            <div>
+                {/* <CurrentlyReading book={currentlyreading}  />
+                <Finished book={finished} /> */}
             </div>
         </>
     )
