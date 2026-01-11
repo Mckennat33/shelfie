@@ -13,6 +13,8 @@ import AllBooks from './pages/AllBooks'
 import CurrentlyReading from './pages/CurrentlyReading';
 import Finished from './pages/Finished';
 import BookDetails from './pages/BookDetails';
+import SignUp from './pages/SignUp'
+import WantToRead from './pages/WantToRead';
 
 function App() {
   return (
@@ -23,10 +25,11 @@ function App() {
           <Route path='/' element={<BookDashBoard />}>
             <Route path='/' element={<AllBooks />} />
             <Route path="/currentlyreading" element={<CurrentlyReading />} />
+            <Route path='/wantToRead' element={< WantToRead />} />
             <Route path="/finished" element={<Finished />} />
           </Route>
           <Route path='/books/:id' element={<BookDetails />} />
-          
+          <Route path='/signup' element={<SignUp />} />
         </Route>
       </Routes>
     </BrowserRouter>

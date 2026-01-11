@@ -21,6 +21,12 @@ const BookDashboard = () => {
                         Currently Reading 
                     </Link>
                     <Link
+                        to='wanttoread'
+                        className='want-to-reading'
+                    >
+                        Want to read 
+                    </Link>
+                    <Link
                         to='finished'
                         className='finished-books'
                     >

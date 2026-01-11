@@ -4,21 +4,23 @@ import Books from '../database/books.js'
 import BookDetails from './BookDetails.jsx'
 import CurrentlyReading from './CurrentlyReading.jsx'
 import Finished from './Finished.jsx'
-
+import WantToRead from './WantToRead.jsx'
 
 const AllBooks = () => {
  
     const [ readSelect, setReadSelect ] = useState({})
     const [read, setRead] = useState({})
     const [currentlyreading, setCurrentlyReading] = useState({})
-    const [wantToread, setWantToRead] = useState({})
+    const [wantToRead, setWantToRead] = useState({})
 
     function handleSelect(bookId, event, book) { 
         setReadSelect(prevSelect => ({
             ...prevSelect,
             [bookId]: event // key value pairs 
         }))
-        // console.log(book)
+        
+
+        // the problem may be we are making these objects instead of an array of objects 
         
         if(event === 'Read') {
             setRead(prevRead => ({
@@ -39,7 +41,6 @@ const AllBooks = () => {
         }    
     }  
 
-    console.log(read, currentlyreading, wantToread)
 
 
     return(
@@ -72,7 +73,9 @@ const AllBooks = () => {
             </div>
             <div>
                 <CurrentlyReading books={currentlyreading}  />
-                <Finished read={read.book} />
+                <WantToRead want={wantToRead} />
+                <Finished read={read} />
+
             </div>
         </>
     )
