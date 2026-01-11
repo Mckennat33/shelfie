@@ -42,6 +42,11 @@ const AllBooks = () => {
     }  
 
 
+    function addToList(bookId, event, book) {
+        // depending on what drop down was selected
+        // add the book to the list 
+    }
+
 
     return(
         <>
@@ -72,9 +77,9 @@ const AllBooks = () => {
                 })}
             </div>
             <div>
-                <CurrentlyReading books={currentlyreading}  />
-                <WantToRead want={wantToRead} />
-                <Finished read={read} />
+                <CurrentlyReading addToList={addToList} books={currentlyreading}  />
+                <WantToRead addToList={addToList} want={wantToRead} />
+                <Finished addToList={addToList} read={read} />
 
             </div>
         </>
