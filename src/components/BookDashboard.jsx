@@ -22,7 +22,7 @@ const BookDashboard = () => {
                     </Link>
                     <Link
                         to='wanttoread'
-                        className='want-to-reading'
+                        className='want-to-read'
                     >
                         Want to read 
                     </Link>

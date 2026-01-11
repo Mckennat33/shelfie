@@ -88,6 +88,15 @@ code {
   padding: 10px;
 }
 
+.want-to-read {
+  color: purple;
+  border-radius: 5px;
+  border: 2px solid purple;
+  padding: 10px;
+}
+
+
+
 .finished-books {
   color: blue;
   border-radius: 5px;
