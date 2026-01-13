@@ -8,8 +8,8 @@ import WantToRead from './WantToRead.jsx'
 
 const AllBooks = () => {
  
-    const [ readSelect, setReadSelect ] = useState({})
-    const [read, setRead] = useState({})
+    const [ readSelect, setReadSelect ] = useState([])
+    const [read, setRead] = useState([])
     const [currentlyreading, setCurrentlyReading] = useState({})
     const [wantToRead, setWantToRead] = useState({})
 
@@ -23,10 +23,10 @@ const AllBooks = () => {
         // the problem may be we are making these objects instead of an array of objects 
         
         if(event === 'Read') {
-            setRead(prevRead => ({
-                ...prevRead, 
-                book
-            }))
+            setRead(prevRead => (
+                {...prevRead, book}
+            )
+        )
             // console.log("Read 1")
         } else if (event === "Want to read") {
             setWantToRead(prevWantToRead => ({
