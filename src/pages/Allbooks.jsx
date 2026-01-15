@@ -8,26 +8,27 @@ import WantToRead from './WantToRead.jsx'
 
 const AllBooks = () => {
  
-    const [ readSelect, setReadSelect ] = useState([])
+    const [ readSelect, setReadSelect ] = useState(Books)
     const [read, setRead] = useState([])
-    const [currentlyreading, setCurrentlyReading] = useState({})
-    const [wantToRead, setWantToRead] = useState({})
+    const [currentlyreading, setCurrentlyReading] = useState([])
+    const [wantToRead, setWantToRead] = useState([])
 
     function handleSelect(bookId, event, book) { 
-        setReadSelect(prevSelect => ({
-            ...prevSelect,
-            [bookId]: event // key value pairs 
-        }))
-        
-
+        // console.log(bookId, event, book)
+        setReadSelect(prevSelect => (
+            {...prevSelect, [bookId]: event  }
+        )
+    )
         // the problem may be we are making these objects instead of an array of objects 
         
         if(event === 'Read') {
-            setRead(prevRead => (
-                {...prevRead, book}
-            )
-        )
-            // console.log("Read 1")
+            setRead(book)
+            // setRead(prevRead => (
+            //     // [...prevRead, book]
+            //     {...prevRead, book}
+            // ))
+            console.log(read)
+
         } else if (event === "Want to read") {
             setWantToRead(prevWantToRead => ({
                 ...prevWantToRead, 
@@ -77,9 +78,9 @@ const AllBooks = () => {
                 })}
             </div>
             <div>
-                <CurrentlyReading addToList={addToList} books={currentlyreading}  />
+                {/* <CurrentlyReading addToList={addToList} books={currentlyreading}  />
                 <WantToRead addToList={addToList} want={wantToRead} />
-                <Finished addToList={addToList} read={read} />
+                <Finished addToList={addToList} read={read} /> */}
 
             </div>
         </>
