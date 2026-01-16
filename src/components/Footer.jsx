@@ -4,7 +4,9 @@ import { AgCharts } from 'ag-charts-react';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
 
+
 function Footer() {
+    const [pages, setPages] = useState(0)
     const [chartOptions, setChartOptions] = useState({
         data: [
             { month: 'Jan', avgTemp: 2.2, pagesRead: 200000 },
@@ -33,9 +35,9 @@ function Footer() {
                             <h3>Reading Progress</h3>
                         </div>
                         <div className='right-header'>
-                            <form action="" >
-                            <input type="text" />
-                            <button onSubmit={handleLogPages}>Log Pages +</button>
+                            <form action="" onSubmit={(e) => handleLogPages(e)} >
+                            <input type="number" />
+                            <button>Log Pages +</button>
                             </form>
                             
                         </div>
