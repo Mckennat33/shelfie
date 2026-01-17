@@ -20,8 +20,12 @@ function Footer() {
     });
 
     function handleLogPages(e) {
+        // how many pages you read that day
+        // adds it to state 
         e.preventDefault()
-        console.log('Logged Pages')
+        setPages(pages)
+
+        console.log(pages)
     }
 
     return (
@@ -36,12 +40,14 @@ function Footer() {
                         </div>
                         <div className='right-header'>
                             <form action="" onSubmit={(e) => handleLogPages(e)} >
-                            <input type="number" />
+                            <input type="number" onChange={(e) => {setPages(Number(e.target.value))}} />
                             <button>Log Pages +</button>
                             </form>
                             
                         </div>
+                        
                     </div>
+                        <h4>Pages:</h4><p>{pages}</p>
                     <div className="page-counter-container">
                         <h3>Total Pages</h3>
                         <h3>Daily Average</h3>
