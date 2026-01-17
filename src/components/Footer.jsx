@@ -3,8 +3,6 @@ import { useState } from 'react'
 import { AgCharts } from 'ag-charts-react';
 ModuleRegistry.registerModules([AllCommunityModule]);
 
-
-
 function Footer() {
     const [pages, setPages] = useState(0)
     const [chartOptions, setChartOptions] = useState({
@@ -20,12 +18,8 @@ function Footer() {
     });
 
     function handleLogPages(e) {
-        // how many pages you read that day
-        // adds it to state 
         e.preventDefault()
         setPages(pages)
-
-        console.log(pages)
     }
 
     return (
@@ -43,9 +37,7 @@ function Footer() {
                             <input type="number" onChange={(e) => {setPages(Number(e.target.value))}} />
                             <button>Log Pages +</button>
                             </form>
-                            
                         </div>
-                        
                     </div>
                         <h4>Pages:</h4><p>{pages}</p>
                     <div className="page-counter-container">
