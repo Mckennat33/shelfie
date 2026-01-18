@@ -9,37 +9,26 @@ import WantToRead from './WantToRead.jsx'
 const AllBooks = () => {
  
     const [ readSelect, setReadSelect ] = useState(Books)
-    const [read, setRead] = useState([])
-    const [currentlyreading, setCurrentlyReading] = useState([])
-    const [wantToRead, setWantToRead] = useState([])
-
-    function handleSelect(bookId, event, book) { 
-        // console.log(bookId, event, book)
-        setReadSelect(prevSelect => (
-            {...prevSelect, [bookId]: event  }
-        )
+    // const [read, setRead] = useState([])
+    // const [currentlyreading, setCurrentlyReading] = useState([])
+    // const [wantToRead, setWantToRead] = useState([])
+    const [books, setBooks] = useState(
+        Books.map(book => ({
+            ...book, 
+            status: "Want to read"
+        }))
     )
-        // the problem may be we are making these objects instead of an array of objects 
-        
-        if(event === 'Read') {
-            setRead(book)
-            // setRead(prevRead => (
-            //     // [...prevRead, book]
-            //     {...prevRead, book}
-            // ))
-            console.log(read)
 
-        } else if (event === "Want to read") {
-            setWantToRead(prevWantToRead => ({
-                ...prevWantToRead, 
-                book
-            }))
-        } else if (event === 'Currently reading') {
-            setCurrentlyReading(prevCurrentlyRead => ({
-                ...prevCurrentlyRead, 
-                book
-            }))
-        }    
+    const read = books.filter(book => book.status === 'read') 
+    const currentlyReading = books.filter(book => book.status === 'currentlyreading') 
+    const wantToRead = books.filter(book => book.status === 'wanttoread') 
+
+
+
+    function handleSelect(bookId, event) { 
+         
+        console.log(bookId, event)
+        
     }  
 
 
@@ -65,8 +54,8 @@ const AllBooks = () => {
                             <p className='book-genre'>Genre: {book.genre}</p>
                             </Link>
                             <form>
-                            <select value={readSelect[book.id] || 'Want to read'} className='book-bttns-container' 
-                            onChange={(e) => handleSelect(book.id, e.target.value, book)}
+                            <select value={books.status} className='book-bttns-container' 
+                            onChange={(e) => handleSelect(book.id, e.target.value)}
                             >
                                 <option value='Want to read' className='want-to-read'>Want to read</option>
                                 <option value='Currently reading' className='currently-reading'>Currently reading</option>
