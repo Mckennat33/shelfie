@@ -25,6 +25,7 @@ const AllBooks = () => {
 
 
 
+
     function handleSelect(bookId, newStatus) { 
         setBooks(prevBooks => 
             prevBooks.map(book => 
@@ -33,7 +34,7 @@ const AllBooks = () => {
                 : book
             )
         )
-        console.log(books)
+
     }  
 
 
@@ -72,9 +73,7 @@ const AllBooks = () => {
                 })}
             </div>
             <div>
-                {/* <CurrentlyReading addToList={addToList} books={currentlyreading}  />
-                <WantToRead addToList={addToList} want={wantToRead} />
-                <Finished addToList={addToList} read={read} /> */}
+
 
             </div>
         </>
