@@ -25,10 +25,15 @@ const AllBooks = () => {
 
 
 
-    function handleSelect(bookId, event) { 
-         
-        console.log(bookId, event)
-        
+    function handleSelect(bookId, newStatus) { 
+        setBooks(prevBooks => 
+            prevBooks.map(book => 
+                book.id === bookId
+                ? { ...book, status: newStatus}
+                : book
+            )
+        )
+        console.log(books)
     }  
 
 
