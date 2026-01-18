@@ -26,7 +26,7 @@ const AllBooks = () => {
 
 
 
-    function handleSelect(bookId, newStatus) { 
+    function handleSelect(bookId, newStatus, book) { 
         setBooks(prevBooks => 
             prevBooks.map(book => 
                 book.id === bookId
@@ -34,9 +34,10 @@ const AllBooks = () => {
                 : book
             )
         )
-
+        
     }  
 
+    // sending each book to a different component based on the their status
 
     function addToList(bookId, event, book) {
         // depending on what drop down was selected
@@ -61,7 +62,7 @@ const AllBooks = () => {
                             </Link>
                             <form>
                             <select value={books.status} className='book-bttns-container' 
-                            onChange={(e) => handleSelect(book.id, e.target.value)}
+                            onChange={(e) => handleSelect(book.id, e.target.value, book)}
                             >
                                 <option value='Want to read' className='want-to-read'>Want to read</option>
                                 <option value='Currently reading' className='currently-reading'>Currently reading</option>
@@ -73,8 +74,9 @@ const AllBooks = () => {
                 })}
             </div>
             <div>
-
-
+                <CurrentlyReading books={currentlyReading} />
+                <WantToRead books={wantToRead} />
+                <Finished books={read} />
             </div>
         </>
     )

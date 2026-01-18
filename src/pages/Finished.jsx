@@ -2,11 +2,8 @@ import react from 'react'
 import Books from '../database/books'
 import { useState } from 'react'
 
-const Finished = ({addToList, read}) => {
-    // const {discription, genre, id, title, total_pages} = read.book
-    // console.log(addToList)
-
-    const [test, setTest] = useState(false)
+const Finished = ({read}) => {
+    console.log(read)
 return (
         <>
             <p>Finished Books</p>
