@@ -9,20 +9,15 @@ import WantToRead from './WantToRead.jsx'
 const AllBooks = () => {
  
     const [ readSelect, setReadSelect ] = useState(Books)
-    const [read, setRead] = useState([])
-    const [currentlyreading, setCurrentlyReading] = useState([])
-    const [wantToRead, setWantToRead] = useState([])
+    // const [read, setRead] = useState([])
+    // const [currentlyreading, setCurrentlyReading] = useState([])
+    // const [wantToRead, setWantToRead] = useState([])
     const [books, setBooks] = useState(
         Books.map(book => ({
             ...book, 
             status: "Want to read"
         }))
     )
-
-    // const read = books.filter(book => book.status === 'read') 
-    // const currentlyReading = books.filter(book => book.status === 'currentlyreading') 
-    // const wantToRead = books.filter(book => book.status === 'wanttoread') 
-
 
 
 
@@ -33,24 +28,16 @@ const AllBooks = () => {
                 ? { ...book, status: newStatus}
                 : book
             )
+
         )
 
-        books.map((book) => {
-            if (book.id === bookId) {
-                console.log(book.status)
-                    switch(book.status) {
-                        case "Read":
-                        setRead(book)
-                        break; 
-                        case "Want to read":
-                        setWantToRead(book)
-                        break; 
-                        case "Currently reading":
-                        setCurrentlyReading(book)
-                        break; 
-                    }
-            }
-        })
+                // const read = books.filter(book => book.status === 'read') 
+    const currentlyReading = books.filter(book => book.status === 'currentlyreading') 
+    const wantToRead = books.filter(book => book.status === 'wanttoread') 
+
+console.log(currentlyReading)
+
+
         
     }  
 
@@ -94,7 +81,7 @@ const AllBooks = () => {
             <div>
                 {/* <CurrentlyReading books={currentlyReading} />
                 <WantToRead books={wantToRead} /> */}
-                <Finished books={read} />  
+                {/* <Finished books={read} />   */}
             </div>
         </>
     )
