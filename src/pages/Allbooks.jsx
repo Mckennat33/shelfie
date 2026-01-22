@@ -9,9 +9,9 @@ import WantToRead from './WantToRead.jsx'
 const AllBooks = () => {
  
     const [ readSelect, setReadSelect ] = useState(Books)
-    // const [read, setRead] = useState([])
-    // const [currentlyreading, setCurrentlyReading] = useState([])
-    // const [wantToRead, setWantToRead] = useState([])
+    const [read, setRead] = useState([])
+    const [currentlyreading, setCurrentlyReading] = useState([])
+    const [wantToRead, setWantToRead] = useState([])
     const [books, setBooks] = useState(
         Books.map(book => ({
             ...book, 
@@ -19,9 +19,9 @@ const AllBooks = () => {
         }))
     )
 
-    const read = books.filter(book => book.status === 'read') 
-    const currentlyReading = books.filter(book => book.status === 'currentlyreading') 
-    const wantToRead = books.filter(book => book.status === 'wanttoread') 
+    // const read = books.filter(book => book.status === 'read') 
+    // const currentlyReading = books.filter(book => book.status === 'currentlyreading') 
+    // const wantToRead = books.filter(book => book.status === 'wanttoread') 
 
 
 
@@ -34,16 +34,34 @@ const AllBooks = () => {
                 : book
             )
         )
+
+        books.map((book) => {
+            if (book.id === bookId) {
+                console.log(book.status)
+                    switch(book.status) {
+                        case "Read":
+                        setRead(book)
+                        break; 
+                        case "Want to read":
+                        setWantToRead(book)
+                        break; 
+                        case "Currently reading":
+                        setCurrentlyReading(book)
+                        break; 
+                    }
+            }
+        })
         
     }  
 
-    // sending each book to a different component based on the their status
 
+    
+
+    // sending each book to a different component based on the their status
     function addToList(bookId, event, book) {
         // depending on what drop down was selected
         // add the book to the list 
     }
-
 
     return(
         <>
@@ -74,9 +92,9 @@ const AllBooks = () => {
                 })}
             </div>
             <div>
-                <CurrentlyReading books={currentlyReading} />
-                <WantToRead books={wantToRead} />
-                <Finished books={read} />
+                {/* <CurrentlyReading books={currentlyReading} />
+                <WantToRead books={wantToRead} /> */}
+                <Finished books={read} />  
             </div>
         </>
     )

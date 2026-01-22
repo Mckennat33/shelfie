@@ -3,7 +3,7 @@ import Books from '../database/books'
 import { useState } from 'react'
 
 const Finished = ({read}) => {
-    console.log(read)
+
 return (
         <>
             <p>Finished Books</p>
