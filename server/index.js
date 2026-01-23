@@ -1,15 +1,11 @@
+const express = require('express') 
+const app = express() 
 
-const db = require('./config/db.js')
-const express = require('express')
-const app = express()
-const port = 8081
+const PORT = 3000
 
-app.get('/', (req, res) => {
-    res.send('Hello from the backend')
 
+
+
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}`)
 })
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
-
