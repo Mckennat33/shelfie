@@ -12,6 +12,9 @@ const AllBooks = () => {
     // const [read, setRead] = useState([])
     // const [currentlyreading, setCurrentlyReading] = useState([])
     // const [wantToRead, setWantToRead] = useState([])
+    
+
+    // state of books to add "want to read" to each book card
     const [books, setBooks] = useState(
         Books.map(book => ({
             ...book, 
@@ -22,13 +25,13 @@ const AllBooks = () => {
 
 
     function handleSelect(bookId, newStatus, book) { 
+        // setting state
         setBooks(prevBooks => 
             prevBooks.map(book => 
                 book.id === bookId
                 ? { ...book, status: newStatus}
                 : book
             )
-
         )
 
                 // const read = books.filter(book => book.status === 'read') 
