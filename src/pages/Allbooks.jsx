@@ -64,7 +64,10 @@ const AllBooks = () => {
             </div>
             <div>
                 <CurrentlyReading books={books} />
-                <WantToRead books={books} /> 
+            
+               {
+                 books ?   <WantToRead books={books} /> : <p>Nope</p> 
+               }
                 <Finished books={books} />  
             </div>
         </>
