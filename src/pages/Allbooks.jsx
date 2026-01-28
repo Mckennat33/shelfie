@@ -7,13 +7,8 @@ import Finished from './Finished.jsx'
 import WantToRead from './WantToRead.jsx'
 
 const AllBooks = () => {
- 
-    const [ readSelect, setReadSelect ] = useState(Books)
-    // const [read, setRead] = useState([])
-    // const [currentlyreading, setCurrentlyReading] = useState([])
-    // const [wantToRead, setWantToRead] = useState([])
-    
 
+    const [ readSelect, setReadSelect ] = useState(Books)
     // state of books to add "want to read" to each book card
     const [books, setBooks] = useState(
         Books.map(book => ({
@@ -22,10 +17,7 @@ const AllBooks = () => {
         }))
     )
 
-
-
     function handleSelect(bookId, newStatus, book) { 
-        // setting state
         setBooks(prevBooks => 
             prevBooks.map(book => 
                 book.id === bookId
@@ -33,19 +25,8 @@ const AllBooks = () => {
                 : book
             )
         )
-
-                // const read = books.filter(book => book.status === 'read') 
-    const currentlyReading = books.filter(book => book.status === 'currentlyreading') 
-    const wantToRead = books.filter(book => book.status === 'wanttoread') 
-
-console.log(currentlyReading)
-
-
-        
     }  
 
-
-    
 
     // sending each book to a different component based on the their status
     function addToList(bookId, event, book) {
@@ -82,9 +63,9 @@ console.log(currentlyReading)
                 })}
             </div>
             <div>
-                {/* <CurrentlyReading books={currentlyReading} />
-                <WantToRead books={wantToRead} /> */}
-                {/* <Finished books={read} />   */}
+                <CurrentlyReading books={books} />
+                <WantToRead books={books} /> 
+                <Finished books={books} />  
             </div>
         </>
     )
