@@ -11,7 +11,13 @@ const WantToRead = ({books}) => {
         <>
             <h1>Want To Read</h1>
             <div className='want-to-read-cards'>
-                
+                {books.map((book) => {
+                    return(
+                        <div key={book.id}>
+                            {}
+                        </div>
+                    )
+                })}
                 
             </div>
             
