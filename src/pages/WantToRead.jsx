@@ -14,7 +14,9 @@ const WantToRead = ({books}) => {
                 {books.map((book) => {
                     return(
                         <div key={book.id}>
-                            {}
+                            <p>{book.title}</p>
+                            <p>{book.author}</p>
+                            <p>{book.description}</p>
                         </div>
                     )
                 })}
